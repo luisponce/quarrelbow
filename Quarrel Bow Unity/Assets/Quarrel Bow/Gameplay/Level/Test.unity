@@ -143,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 142424, guid: 145b4f6926b2e468d976a296ea4b359c, type: 2}
   characterSize: {x: 2, y: 4}
+  timeToReachMaxForce: .699999988
+  maxForce: 1000
 --- !u!4 &298675788
 Transform:
   m_ObjectHideFlags: 0
