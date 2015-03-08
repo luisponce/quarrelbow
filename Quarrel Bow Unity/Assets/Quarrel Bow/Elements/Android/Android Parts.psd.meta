@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 61d358530d655ee468821322d27b17d5
+timeCreated: 1425853514
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Android Head
+    21300002: Android Torso
+    21300004: Android Leg
+    21300006: Android Leg2
+    21300008: Android Hand
+    21300010: Android Connector
+    21300012: Android Arm2
+    21300014: Android Arm
+    21300016: Android Foot
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Android Head
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 183
+        width: 57
+        height: 73
+      alignment: 9
+      pivot: {x: .186956346, y: .20932509}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Torso
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 84
+        width: 57
+        height: 172
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Leg
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 31
+        height: 134
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Leg2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 47
+        width: 22
+        height: 131
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Hand
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 51
+        width: 17
+        height: 33
+      alignment: 9
+      pivot: {x: .44845131, y: .887708485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Connector
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Arm2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 31
+        width: 92
+        height: 12
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Arm
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 8
+        width: 93
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Foot
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 16
+        height: 57
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
