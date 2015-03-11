@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 61d358530d655ee468821322d27b17d5
-timeCreated: 1425853514
+timeCreated: 1426038766
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -13,6 +13,7 @@ TextureImporter:
     21300012: Android Arm2
     21300014: Android Arm
     21300016: Android Foot
+    21300018: Android Parts_square
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -147,6 +148,16 @@ TextureImporter:
         height: 57
       alignment: 7
       pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Android Parts_square
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
