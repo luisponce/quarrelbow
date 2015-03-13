@@ -22,6 +22,12 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+        public bool FacingRight
+        {
+            get { return m_FacingRight; }
+            set { m_FacingRight = value; }
+        }
+
         private void Awake()
         {
             // Setting up references.
@@ -50,7 +56,6 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
 
-
         public void Move(float move, bool crouch, bool jump)
         {
             // If crouching, check to see if the character can stand up
@@ -72,24 +77,25 @@ namespace UnityStandardAssets._2D
                 // Reduce the speed if crouching by the crouchSpeed multiplier
                 move = (crouch ? move*m_CrouchSpeed : move);
 
+                float direction = (FacingRight ? 1f : -1f);
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
-                m_Anim.SetFloat("Speed", Mathf.Abs(move));
+                m_Anim.SetFloat("Speed", move * direction);
 
                 // Move the character
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
-                // If the input is moving the player right and the player is facing left...
-                if (move > 0 && !m_FacingRight)
-                {
-                    // ... flip the player.
-                    Flip();
-                }
-                    // Otherwise if the input is moving the player left and the player is facing right...
-                else if (move < 0 && m_FacingRight)
-                {
-                    // ... flip the player.
-                    Flip();
-                }
+                //// If the input is moving the player right and the player is facing left...
+                //if (move > 0 && !m_FacingRight)
+                //{
+                //    // ... flip the player.
+                //    Flip();
+                //}
+                //    // Otherwise if the input is moving the player left and the player is facing right...
+                //else if (move < 0 && m_FacingRight)
+                //{
+                //    // ... flip the player.
+                //    Flip();
+                //}
             }
             // If the player should jump...
             if (m_Grounded && jump && m_Anim.GetBool("Ground"))
@@ -102,7 +108,7 @@ namespace UnityStandardAssets._2D
         }
 
 
-        private void Flip()
+        public void Flip()
         {
             // Switch the way the player is labelled as facing.
             m_FacingRight = !m_FacingRight;
