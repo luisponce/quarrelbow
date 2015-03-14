@@ -10,6 +10,8 @@ public class ArrowFiring : MonoBehaviour {
 	public float timeToReachMaxForce = 2;
 	public float maxForce = 1000;
 
+	public float minForce = 100;
+
 	private Vector3 dir;
 	private float timerFiring = 0; //time between the press of the button and the release and shoot of the arrow
 
@@ -44,6 +46,10 @@ public class ArrowFiring : MonoBehaviour {
 	}
 
 	void ShootArrow(Vector3 dir, float force){
+		if (force < minForce){
+			force = minForce;
+		}
+
 		Vector3 pos = transform.position;
 		pos.x += dir.x * characterSize.x;
 		pos.y += dir.y * characterSize.y;

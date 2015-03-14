@@ -18,10 +18,20 @@ public class Arrow : MonoBehaviour {
         if (collision.gameObject.layer == (int)ELayer.Wall)
         {
             state = EArrowState.Platform;
+			LockInPlace();
         }
         else
         {
             state = EArrowState.Ignored;
         }
     }
+
+	void LockInPlace(){
+		transform.rotation = Quaternion.LookRotation(Vector3.forward, -Vector3.Cross(Vector3.right,Vector3.forward));
+
+		Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+		rb.velocity = new Vector3(0,0,0);
+		rb.isKinematic = true;
+	}
 }
