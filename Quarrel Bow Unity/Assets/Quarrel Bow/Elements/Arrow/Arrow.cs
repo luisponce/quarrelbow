@@ -5,6 +5,10 @@ public class Arrow : MonoBehaviour {
 
     public EArrowState state;
 
+	void Start(){
+		GetComponent<BoxCollider2D>().usedByEffector = false;
+	}
+
 	void Update () {
         if (state == EArrowState.Moving)
         {
@@ -23,6 +27,7 @@ public class Arrow : MonoBehaviour {
         else
         {
             state = EArrowState.Ignored;
+
         }
     }
 
@@ -33,5 +38,6 @@ public class Arrow : MonoBehaviour {
 
 		rb.velocity = new Vector3(0,0,0);
 		rb.isKinematic = true;
+		GetComponent<BoxCollider2D>().usedByEffector = true;
 	}
 }
