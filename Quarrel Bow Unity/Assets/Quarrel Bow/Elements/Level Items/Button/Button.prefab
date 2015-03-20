@@ -9,8 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 480432}
   - 212: {fileID: 21229290}
-  - 61: {fileID: 6109544}
-  - 50: {fileID: 5096942}
   m_Layer: 0
   m_Name: Activator
   m_TagString: Untagged
@@ -28,6 +26,8 @@ GameObject:
   - 4: {fileID: 496772}
   - 212: {fileID: 21246646}
   - 61: {fileID: 6192288}
+  - 95: {fileID: 9553840}
+  - 114: {fileID: 11481282}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -55,39 +55,11 @@ Transform:
   m_GameObject: {fileID: 145120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3125, y: .167500585, z: 1}
+  m_LocalScale: {x: 3, y: .400000006, z: 2}
   m_Children:
   - {fileID: 480432}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5096942
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102646}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!61 &6109544
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102646}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: .319999993, y: .319999993}
 --- !u!61 &6192288
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -96,11 +68,40 @@ BoxCollider2D:
   m_GameObject: {fileID: 145120}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.319999993}
+  m_Offset: {x: 0, y: .319999993}
   serializedVersion: 2
   m_Size: {x: .319999993, y: .319999993}
+--- !u!95 &9553840
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92fd732929a87834f8ee3181b912a1e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11481282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cbe755a71b5fb429c7b15df9475ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
 --- !u!212 &21229290
 SpriteRenderer:
   m_ObjectHideFlags: 1

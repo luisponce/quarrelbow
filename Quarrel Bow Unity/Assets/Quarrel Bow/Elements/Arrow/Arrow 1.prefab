@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6153946}
   - 114: {fileID: 11491602}
   - 251: {fileID: 25104014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arrow 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484052}
   - 212: {fileID: 21287762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
