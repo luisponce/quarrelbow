@@ -22,7 +22,7 @@ public class Arrow : MonoBehaviour {
         if (collision.gameObject.layer == (int)ELayer.Wall)
         {
             state = EArrowState.Platform;
-			LockInPlace();
+			LockInPlace(collision.contacts[0].point);
         }
         else
         {
@@ -31,7 +31,8 @@ public class Arrow : MonoBehaviour {
         }
     }
 
-	void LockInPlace(){
+	void LockInPlace(Vector2 place){
+		transform.position = new Vector2(transform.position.x, place.y);
 		transform.rotation = Quaternion.LookRotation(Vector3.forward, -Vector3.Cross(Vector3.right,Vector3.forward));
 
 		Rigidbody2D rb = GetComponent<Rigidbody2D>();
