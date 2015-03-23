@@ -23,6 +23,8 @@ public class Arrow : MonoBehaviour {
         {
             state = EArrowState.Platform;
 			LockInPlace(collision.contacts[0].point);
+
+			this.transform.SetParent(collision.gameObject.transform);
         }
         else
         {
