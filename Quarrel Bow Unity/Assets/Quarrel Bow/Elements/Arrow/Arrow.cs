@@ -21,15 +21,27 @@ public class Arrow : MonoBehaviour {
     {
         if (collision.gameObject.layer == (int)ELayer.Wall)
         {
+            if (Mathf.Abs(Vector2.Angle(Vector2.right, transform.right)) > 45f)
+            {
+                return;
+            }
             state = EArrowState.Platform;
 			LockInPlace(collision.contacts[0].point);
 
 			this.transform.SetParent(collision.gameObject.transform);
         }
+        else if (collision.gameObject.layer == (int)ELayer.Enemy)
+        {
+            transform.Translate(transform.forward * 0.5f);
+            transform.SetParent(collision.transform);
+            collision.transform.GetComponent<Shoky>().Kill();
+            collision.transform.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+            GetComponent<Rigidbody2D>().isKinematic = true;
+            state = EArrowState.Ignored;
+        }
         else
         {
             state = EArrowState.Ignored;
-
         }
     }
 
