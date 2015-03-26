@@ -19,6 +19,10 @@ public class Android : MonoBehaviour
 
 
         float angle = Mathf.Atan2(diff.y,diff.x) * Mathf.Rad2Deg+ 90f;
+        while (angle < 0)
+        {
+            angle += 360;
+        }
 
         if (angle > 180 && character.FacingRight)
         {
