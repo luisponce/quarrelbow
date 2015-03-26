@@ -2,5 +2,7 @@
     Ground = 8,
     Wall,
     player,
-    Enemy
+    Enemy,
+    Ignore,
+    Arrow
 }

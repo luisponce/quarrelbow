@@ -3,14 +3,15 @@ using System.Collections;
 
 public class Arrow : MonoBehaviour {
 
-    public EArrowState state;
+    [SerializeField]
+    private EArrowState state;
 
 	void Start(){
 		GetComponent<BoxCollider2D>().usedByEffector = false;
 	}
 
 	void Update () {
-        if (state == EArrowState.Moving)
+        if (State == EArrowState.Moving)
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             transform.rotation = Quaternion.Euler(Vector3.forward * (Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg));
@@ -19,15 +20,15 @@ public class Arrow : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (state != EArrowState.Moving)
+        {
+            return;
+        }
         if (collision.gameObject.layer == (int)ELayer.Wall)
         {
-            if (Mathf.Abs(Vector2.Angle(Vector2.right, transform.right)) > 45f)
-            {
-                return;
-            }
-            state = EArrowState.Platform;
+            float angle = Mathf.Abs(Vector2.Angle(Vector2.right, transform.right));
+            State = EArrowState.Platform;
 			LockInPlace(collision.contacts[0].point);
-
 			this.transform.SetParent(collision.gameObject.transform);
         }
         else if (collision.gameObject.layer == (int)ELayer.Enemy)
@@ -36,12 +37,14 @@ public class Arrow : MonoBehaviour {
             transform.SetParent(collision.transform);
             collision.transform.GetComponent<Shoky>().Kill();
             collision.transform.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-            GetComponent<Rigidbody2D>().isKinematic = true;
-            state = EArrowState.Ignored;
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<BoxCollider2D>());
+            State = EArrowState.Ignored;
         }
         else
         {
-            state = EArrowState.Ignored;
+            State = EArrowState.Ignored;
+            Destroy(gameObject, 10f);
         }
     }
 
@@ -55,4 +58,21 @@ public class Arrow : MonoBehaviour {
 		rb.isKinematic = true;
 		GetComponent<BoxCollider2D>().usedByEffector = true;
 	}
+
+    public EArrowState State
+    {
+        get { return state; }
+        set
+        {
+            state = value;
+            if (value == EArrowState.Ignored)
+            {
+                gameObject.layer = (int)ELayer.Ignore;
+            }
+            else if (value == EArrowState.Platform)
+            {
+                gameObject.layer = (int)ELayer.Ground;
+            }
+        }
+    }
 }
