@@ -6,7 +6,7 @@ public class Shoky : MonoBehaviour
 
     public float speed;
 
-    private bool alive = true;
+    public bool alive = true;
 
     // Use this for initialization
     void Start()

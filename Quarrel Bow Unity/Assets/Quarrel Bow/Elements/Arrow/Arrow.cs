@@ -43,7 +43,6 @@ public class Arrow : MonoBehaviour {
         }
         else
         {
-            Debug.Log(((ELayer)collision.gameObject.layer) + ", " + collision.gameObject.name);
             State = EArrowState.Ignored;
             Destroy(gameObject, 10f);
         }
