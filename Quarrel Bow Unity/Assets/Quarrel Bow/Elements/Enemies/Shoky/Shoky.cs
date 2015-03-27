@@ -6,6 +6,8 @@ public class Shoky : MonoBehaviour
 
     public float speed;
 
+    public bool alive = true;
+
     // Use this for initialization
     void Start()
     {
@@ -14,12 +16,16 @@ public class Shoky : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + Vector3.forward * -90f);
-        GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+        if (alive)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + Vector3.forward * -90f);
+            GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+        }
     }
 
     public void Kill()
     {
+        alive = false;
         GetComponent<Rigidbody2D>().gravityScale = 1f;
         enabled = false;
     }

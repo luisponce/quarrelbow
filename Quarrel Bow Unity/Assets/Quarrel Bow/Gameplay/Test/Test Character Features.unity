@@ -706,7 +706,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452364, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453408, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
+      propertyPath: reloadTime
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128296, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
+      propertyPath: m_Size.x
+      value: .810000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128296, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
+      propertyPath: m_Size.y
+      value: 3.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 186028, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
@@ -819,6 +835,8 @@ MonoBehaviour:
   yMargin: 1
   xSmooth: 8
   ySmooth: 8
+  xOffset: 0
+  yOffset: 0
   maxXAndY: {x: 30, y: 0}
   minXAndY: {x: 2, y: 0}
 --- !u!1001 &970945950
@@ -1307,6 +1325,14 @@ Prefab:
     - target: {fileID: 486642, guid: 9ca5d3df9cc115d4da7677ed51e8254e, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045126, guid: 9ca5d3df9cc115d4da7677ed51e8254e, type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045126, guid: 9ca5d3df9cc115d4da7677ed51e8254e, type: 2}
+      propertyPath: m_FixedAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ca5d3df9cc115d4da7677ed51e8254e, type: 2}
