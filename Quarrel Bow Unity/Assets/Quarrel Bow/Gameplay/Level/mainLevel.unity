@@ -438,7 +438,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 113596982}
   - 212: {fileID: 113596983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PrototypeWhite04x01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5868184, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120172, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
@@ -4654,6 +4658,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5868184, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120172, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
   m_IsPrefabParent: 0
@@ -4973,7 +4985,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1217851365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform04x02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5116,11 +5128,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 452364, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 27.3500004
+      value: -8.31000042
       objectReference: {fileID: 0}
     - target: {fileID: 452364, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -26.2199993
+      value: -7.13000011
       objectReference: {fileID: 0}
     - target: {fileID: 452364, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5145,10 +5157,6 @@ Prefab:
     - target: {fileID: 452364, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 186028, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
-      propertyPath: m_Name
-      value: Android
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81a894dfbb72903488dfc24bada30e41, type: 2}
@@ -5704,7 +5712,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5868184, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120172, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b0271ff7190058429d6fc48f1cc52e1, type: 2}
@@ -7360,7 +7372,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1812448146}
   - 61: {fileID: 1812448147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
