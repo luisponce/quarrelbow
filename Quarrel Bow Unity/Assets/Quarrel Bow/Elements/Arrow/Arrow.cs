@@ -33,16 +33,17 @@ public class Arrow : MonoBehaviour {
         }
         else if (collision.gameObject.layer == (int)ELayer.Enemy)
         {
-            transform.Translate(transform.forward * 0.5f);
+            transform.Translate(transform.forward * 1.5f);
             transform.SetParent(collision.transform);
             collision.transform.GetComponent<Shoky>().Kill();
             collision.transform.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<Rigidbody2D>());
             Destroy(GetComponent<BoxCollider2D>());
             State = EArrowState.Ignored;
         }
         else
         {
+            Debug.Log(((ELayer)collision.gameObject.layer) + ", " + collision.gameObject.name);
             State = EArrowState.Ignored;
             Destroy(gameObject, 10f);
         }
@@ -65,6 +66,7 @@ public class Arrow : MonoBehaviour {
         set
         {
             state = value;
+            //Debug.Log(state);
             if (value == EArrowState.Ignored)
             {
                 gameObject.layer = (int)ELayer.Ignore;
